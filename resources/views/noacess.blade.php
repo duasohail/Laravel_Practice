@@ -1,0 +1,1 @@
+<h1>Your age is not enough to access this page</h1>
