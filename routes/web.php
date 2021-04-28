@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\users;
+use App\Http\Controllers\httpPractice;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,5 @@ Route:: view('noacess','noacess');
 Route:: view('login','form');
 
 Route:: post('users', [users::class, 'getData']);
+Route:: get('Reguesthttp',[httpPractice::class, 'httpRequest']);
 
