@@ -12,6 +12,10 @@ class users extends Controller
             'email'=>'required | max:50',
             'password'=>'required | min:5'
         ]);
-      return $req->input();
+      $data= $req->input();
+      $req->session()->put('email', $data['email']);
+      echo session('email');
+     echo "<br><br><a href='/logout'>Logout</a>";
     }
+    
 }

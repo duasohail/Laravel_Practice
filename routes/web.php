@@ -29,3 +29,9 @@ Route:: view('ReguesthttpView','httpRequestView');
 Route:: post('users', [users::class, 'getData']);
 Route:: get('Reguesthttp',[httpPractice::class, 'httpRequest']);
 
+Route::get('/logout', function () {
+   if(session()->has('email')){
+        session()->pull('email');
+   }
+   return redirect('login');
+});
