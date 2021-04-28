@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route:: view('hello', 'hello');// route shortcut
 Route:: view('noacess','noacess');
 Route:: view('login','form');
+Route:: view('ReguesthttpView','httpRequestView');
 
 Route:: post('users', [users::class, 'getData']);
 Route:: get('Reguesthttp',[httpPractice::class, 'httpRequest']);

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 class httpPractice extends Controller
 {
     public function httpRequest(){
-        return  Http::get('https://jsonplaceholder.typicode.com/users');
+        $collection=  Http::get('https://reqres.in/api/users?page=1');
+        return view('httpRequestView', ['collection'=> $collection['data']]);
     }
 }
